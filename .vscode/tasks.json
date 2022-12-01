@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cargo",
+      "command": "run",
+      "group": "build",
+      "problemMatcher": ["$rustc"],
+      "label": "rust: cargo run",
+	  "args": ["${input:challengeIndex}"]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "challengeIndex",
+      "description": "Select the challenge to be solved.",
+      "type": "pickString",
+      "options": [{ "label": "Day 01", "value": "1" }]
+    }
+  ]
+}
