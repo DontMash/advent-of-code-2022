@@ -7,7 +7,7 @@
       "group": "build",
       "problemMatcher": ["$rustc"],
       "label": "rust: cargo run",
-	  "args": ["${input:challengeIndex}"]
+      "args": ["${input:challengeIndex}"]
     }
   ],
   "inputs": [
@@ -15,7 +15,10 @@
       "id": "challengeIndex",
       "description": "Select the challenge to be solved.",
       "type": "pickString",
-      "options": [{ "label": "Day 01", "value": "1" }]
+      "options": [
+        { "label": "Day 01", "value": "1" },
+        { "label": "Day 02", "value": "2" }
+      ]
     }
   ]
 }

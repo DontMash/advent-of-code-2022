@@ -59,6 +59,7 @@ impl AdventChallenge for Puzzle {
     fn solve_two(&self) -> String {
         let mut elves = self.parse();
         elves.sort_by(|a, b| b.cmp(a));
-        return (elves[0] + elves[1] + elves[2]).to_string();
+        let result = elves[0] + elves[1] + elves[2];
+        return result.to_string();
     }
 }
