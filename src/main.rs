@@ -33,6 +33,13 @@ fn main() {
             let result_two: String = challenge.solve_two();
             println!("Result Two: {result_two}")
         }
+        3 => {
+            let challenge = advent::day03::challenge::Puzzle { input };
+            let result_one: String = challenge.solve_one();
+            println!("Result One: {result_one}");
+            let result_two: String = challenge.solve_two();
+            println!("Result Two: {result_two}")
+        }
 
         _ => {
             println!("Unknown challenge index");

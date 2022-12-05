@@ -11,7 +11,7 @@ impl Puzzle {
             .split("\n")
             .filter(|entry| !entry.is_empty())
             .collect();
-        let data: Vec<i32> = 0..;
+        let data: Vec<i32> = (0..10).collect();
 
         return data;
     }
