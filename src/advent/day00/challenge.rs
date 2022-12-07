@@ -23,6 +23,7 @@ impl AdventChallenge for Puzzle {
      */
     fn solve_one(&self) -> String {
         let data = self.parse();
+
         let result = "result";
         return result.to_string();
     }
@@ -32,6 +33,7 @@ impl AdventChallenge for Puzzle {
      */
     fn solve_two(&self) -> String {
         let data = self.parse();
+        
         let result = "result";
         return result.to_string();
     }

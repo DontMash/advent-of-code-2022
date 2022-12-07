@@ -1,5 +1,3 @@
-use std::ptr::null;
-
 use crate::advent::AdventChallenge;
 
 pub struct Puzzle {

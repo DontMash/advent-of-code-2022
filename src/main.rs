@@ -1,6 +1,5 @@
 mod advent;
 
-use crate::advent::AdventChallenge;
 use std::{env, fs};
 
 fn solve_challenge(challenge: &dyn advent::AdventChallenge) {
@@ -44,6 +43,10 @@ fn main() {
         }
         5 => {
             let challenge = advent::day05::challenge::Puzzle { input };
+            solve_challenge(&challenge);
+        }
+        6 => {
+            let challenge = advent::day06::challenge::Puzzle { input };
             solve_challenge(&challenge);
         }
 
