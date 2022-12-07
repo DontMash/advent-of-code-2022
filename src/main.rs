@@ -3,6 +3,13 @@ mod advent;
 use crate::advent::AdventChallenge;
 use std::{env, fs};
 
+fn solve_challenge(challenge: &dyn advent::AdventChallenge) {
+    let result_one: String = challenge.solve_one();
+    println!("Result One: {result_one}");
+    let result_two: String = challenge.solve_two();
+    println!("Result Two: {result_two}")
+}
+
 fn main() {
     let argument = env::args().nth(1).expect("No index provided");
     let challenge_index: i32 = argument.parse::<i32>().unwrap();
@@ -21,31 +28,23 @@ fn main() {
     match challenge_index {
         1 => {
             let challenge = advent::day01::challenge::Puzzle { input };
-            let result_one: String = challenge.solve_one();
-            println!("Result One: {result_one}");
-            let result_two: String = challenge.solve_two();
-            println!("Result Two: {result_two}")
+            solve_challenge(&challenge);
         }
         2 => {
             let challenge = advent::day02::challenge::Puzzle { input };
-            let result_one: String = challenge.solve_one();
-            println!("Result One: {result_one}");
-            let result_two: String = challenge.solve_two();
-            println!("Result Two: {result_two}")
+            solve_challenge(&challenge);
         }
         3 => {
             let challenge = advent::day03::challenge::Puzzle { input };
-            let result_one: String = challenge.solve_one();
-            println!("Result One: {result_one}");
-            let result_two: String = challenge.solve_two();
-            println!("Result Two: {result_two}")
+            solve_challenge(&challenge);
         }
         4 => {
             let challenge = advent::day04::challenge::Puzzle { input };
-            let result_one: String = challenge.solve_one();
-            println!("Result One: {result_one}");
-            let result_two: String = challenge.solve_two();
-            println!("Result Two: {result_two}")
+            solve_challenge(&challenge);
+        }
+        5 => {
+            let challenge = advent::day05::challenge::Puzzle { input };
+            solve_challenge(&challenge);
         }
 
         _ => {
