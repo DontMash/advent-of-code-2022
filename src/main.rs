@@ -3,10 +3,9 @@ mod advent;
 use std::{env, fs};
 
 fn solve_challenge(challenge: &dyn advent::AdventChallenge) {
-    let result_one: String = challenge.solve_one();
-    println!("Result One: {result_one}");
-    let result_two: String = challenge.solve_two();
-    println!("Result Two: {result_two}")
+    let result = challenge.solve();
+    println!("Result One: {}", result.0);
+    println!("Result Two: {}", result.1);
 }
 
 fn main() {
@@ -47,6 +46,10 @@ fn main() {
         }
         6 => {
             let challenge = advent::day06::challenge::Puzzle { input };
+            solve_challenge(&challenge);
+        }
+        7 => {
+            let challenge = advent::day07::challenge::Puzzle { input };
             solve_challenge(&challenge);
         }
 
